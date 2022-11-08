@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<classes>
+
+  <!-- NOTE: CDS isn't in here because the GFF uses the same ID for all CDS elements. Exon has a suffix, CDS does not. -->
+
+  <class name="MRNA" extends="Transcript" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000234">
+  </class>
+
+  <class name="NcRNA" extends="Transcript" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000655">
+  </class>
+
+  <class name="Exon" is-interface="true">
+    <reference name="transcript" referenced-type="Transcript"/>
+  </class>
+
+</classes>
+

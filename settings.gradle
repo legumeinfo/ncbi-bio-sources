@@ -1,0 +1,13 @@
+rootProject.name = 'bio-sources-ncbi'
+
+include ':bio-source-ncbi-gff'
+include ':bio-source-ncbi-fasta'
+include ':bio-source-ncbi-taxonomy'
+include ':bio-source-ncbi-assembly-report'
+include ':bio-source-secondary-gff'
+
+project(':bio-source-ncbi-gff').projectDir = new File(settingsDir, 'ncbi-gff')
+project(':bio-source-ncbi-fasta').projectDir = new File(settingsDir, 'ncbi-fasta')
+project(':bio-source-ncbi-taxonomy').projectDir = new File(settingsDir, 'ncbi-taxonomy')
+project(':bio-source-ncbi-assembly-report').projectDir = new File(settingsDir, 'ncbi-assembly-report')
+project(':bio-source-secondary-gff').projectDir = new File(settingsDir, 'secondary-gff')

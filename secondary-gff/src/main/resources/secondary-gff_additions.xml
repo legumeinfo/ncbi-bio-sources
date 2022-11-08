@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<classes>
+
+  <class name="MRNA" extends="Transcript" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000234">
+  </class>
+
+  <class name="NcRNA" extends="Transcript" is-interface="true" term="http://purl.obolibrary.org/obo/SO:0000655">
+  </class>
+
+  <class name="Exon" is-interface="true">
+    <reference name="transcript" referenced-type="Transcript"/>
+  </class>
+
+  <!-- LIS provides InterPro IDs on the gene GFF records -->
+  <class name="Gene" is-interface="true">
+    <collection name="proteinDomains" referenced-type="ProteinDomain"/>
+  </class>
+
+  <!-- should not need this! -->
+  <class name="ProteinDomain" extends="BioEntity" is-interface="true">
+    <attribute name="description" type="java.lang.String"/>
+    <attribute name="type" type="java.lang.String"/>
+    <attribute name="shortName" type="java.lang.String"/>
+    <collection name="parentFeatures" referenced-type="ProteinDomain"/>
+    <collection name="childFeatures" referenced-type="ProteinDomain"/>
+    <collection name="contains" referenced-type="ProteinDomain"/>
+    <collection name="foundIn" referenced-type="ProteinDomain"/>
+  </class>
+
+</classes>
+

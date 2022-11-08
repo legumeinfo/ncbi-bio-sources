@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<classes>
+  
+  <class name="BioEntity" is-interface="true">
+    <attribute name="assemblyVersion" type="java.lang.String"/>
+    <attribute name="annotationVersion" type="java.lang.String"/>
+  </class>
+  
+</classes>
